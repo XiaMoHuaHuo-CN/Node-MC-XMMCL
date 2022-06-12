@@ -1,0 +1,12 @@
+{
+  "name": "xmmcl",
+  "version": "1.0.0",
+  "description": "Proxy MC LM S",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js $PORT",
+    "build": "node index.js $PORT"
+  },
+  "author": "XiaMoHuaHuo-CN",
+  "license": "ISC"
+}
