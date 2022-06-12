@@ -1,7 +1,7 @@
 /*
  引入程序
 */
-const https = require('https');
+const http = require('http');
 const url = require('url');
 const fs = require('fs');
 const exit = require('process');
@@ -14,11 +14,13 @@ if (process.argv.slice(2)[0]) {
      启动服务器
     */
     const port = process.argv.slice(2)[0];
+    /*
     const options = {
-        key: fs.readFileSync('server_no_passwd.key'),
-        cert: fs.readFileSync('server.pem')
+        key: fs.readFileSync('key.pem'),
+        cert: fs.readFileSync('cert.pem')
     };
-    https.createServer(options, function(request, response) {
+    */
+    http.createServer(/*options,*/ function(request, response) {
 
         console.log('A request found.');
 
@@ -32,12 +34,12 @@ if (process.argv.slice(2)[0]) {
             _path = reqpath.replace("/launchermeta", "");
             
             console.log('GET villa server file.');
-            https_options = {
+            http_options = {
                 "host": "launchermeta.mojang.com",
                 "path": _path,
-                "port": 443
+                "port": 80
             };
-            request = https.get(https_options, function(respon) {
+            request = http.get(http_options, function(respon) {
                 var body = '';
             
                 respon.on('data', function(chunk) {
@@ -61,12 +63,12 @@ if (process.argv.slice(2)[0]) {
             _path = reqpath.replace("/launcher", "");
 
             console.log('GET villa server file.');
-            https_options = {
+            http_options = {
                 "host": "launcher.mojang.com",
                 "path": _path,
-                "port": 443
+                "port": 80
             };
-            request = https.get(https_options, function(respon) {
+            request = http.get(http_options, function(respon) {
                 var body = '';
             
                 respon.on('data', function(chunk) {
@@ -90,12 +92,12 @@ if (process.argv.slice(2)[0]) {
             _path = reqpath.replace("/assets", "");
 
             console.log('GET villa server file.');
-            https_options = {
+            http_options = {
                 "host": "resources.download.minecraft.net",
                 "path": _path,
-                "port": 443
+                "port": 80
             };
-            request = https.get(https_options, function(respon) {
+            request = http.get(http_options, function(respon) {
                 var body = '';
             
                 respon.on('data', function(chunk) {
@@ -119,12 +121,12 @@ if (process.argv.slice(2)[0]) {
             _path = reqpath.replace("/libraries", "");
 
             console.log('GET villa server file.');
-            https_options = {
+            http_options = {
                 "host": "libraries.minecraft.net",
                 "path": _path,
-                "port": 443
+                "port": 80
             };
-            request = https.get(https_options, function(respon) {
+            request = http.get(http_options, function(respon) {
                 var body = '';
             
                 respon.on('data', function(chunk) {
