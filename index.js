@@ -16,8 +16,8 @@ if (process.argv.slice(2)[0]) {
     */
     const port = process.argv.slice(2)[0];
     const options = {
-        key: fs.readFileSync('C:/Users/25496/server_no_passwd.key'),
-        cert: fs.readFileSync('C:/Users/25496/server.pem')
+        key: fs.readFileSync('server_no_passwd.key'),
+        cert: fs.readFileSync('server.pem')
     };
     https.createServer(options, function(request, response) {
 
