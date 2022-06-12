@@ -4,8 +4,8 @@
   "description": "Proxy MC LM S",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js $PORT",
-    "build": "node index.js $PORT"
+    "test": "node index.js",
+    "build": "node index.js"
   },
   "author": "XiaMoHuaHuo-CN",
   "license": "ISC"
