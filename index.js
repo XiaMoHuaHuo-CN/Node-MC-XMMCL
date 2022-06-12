@@ -9,7 +9,7 @@ const path = require('path');
 
 console.log('Starting proxy...');
 
-if (process.argv.slice(2)[0]) {
+//if (process.argv.slice(2)[0]) {
     /* 
      启动服务器
     */
@@ -21,7 +21,7 @@ if (process.argv.slice(2)[0]) {
     };
     */
     //http.createServer(options, function(request, response) {
-    module.exports = (request, response) => {
+    (request, response) => {
 
         console.log('A request found.');
 
@@ -152,7 +152,7 @@ if (process.argv.slice(2)[0]) {
     };//).listen(port);
     
     console.log('Service started.');
-} else {
+/*} else {
     console.log('Unset port.');
     exit;
-};
+};*/
