@@ -20,7 +20,8 @@ if (process.argv.slice(2)[0]) {
         cert: fs.readFileSync('cert.pem')
     };
     */
-    http.createServer(/*options,*/ function(request, response) {
+    //http.createServer(options, function(request, response) {
+    module.exports = (req, res) => {
 
         console.log('A request found.');
 
