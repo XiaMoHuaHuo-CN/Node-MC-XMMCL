@@ -21,7 +21,7 @@ console.log('Starting proxy...');
     };
     */
     //http.createServer(options, function(request, response) {
-    (request, response) => {
+    module.exports = (request, response) => {
 
         console.log('A request found.');
 
