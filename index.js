@@ -5,7 +5,6 @@ const https = require('https');
 const url = require('url');
 const fs = require('fs');
 const exit = require('process');
-const HttpsProxyAgent = require('https-proxy-agent');
 const path = require('path');
 
 console.log('Starting proxy...');
