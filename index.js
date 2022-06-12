@@ -13,7 +13,7 @@ if (process.argv.slice(2)[0]) {
     /* 
      启动服务器
     */
-    const port = process.argv.slice(2)[0];
+    const port = 443/*process.argv.slice(2)[0]*/;
     /*
     const options = {
         key: fs.readFileSync('key.pem'),
