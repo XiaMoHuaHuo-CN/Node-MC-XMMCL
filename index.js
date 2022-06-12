@@ -13,7 +13,7 @@ if (process.argv.slice(2)[0]) {
     /* 
      启动服务器
     */
-    const port = 443/*process.argv.slice(2)[0]*/;
+    //const port = 443/*process.argv.slice(2)[0]*/;
     /*
     const options = {
         key: fs.readFileSync('key.pem'),
@@ -21,7 +21,7 @@ if (process.argv.slice(2)[0]) {
     };
     */
     //http.createServer(options, function(request, response) {
-    module.exports = (req, res) => {
+    module.exports = (request, response) => {
 
         console.log('A request found.');
 
@@ -149,7 +149,7 @@ if (process.argv.slice(2)[0]) {
             response.end('{"message": "Invalid proxy."}');
         }
 
-    }).listen(port);
+    };//).listen(port);
     
     console.log('Service started.');
 } else {
