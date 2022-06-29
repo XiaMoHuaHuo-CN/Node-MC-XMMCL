@@ -1,7 +1,7 @@
 /*
  引入程序
 */
-const http = require('http');
+const http = require('https');
 const url = require('url');
 const fs = require('fs');
 const exit = require('process');
