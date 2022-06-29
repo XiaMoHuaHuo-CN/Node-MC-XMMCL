@@ -38,7 +38,7 @@ console.log('Starting proxy...');
             http_options = {
                 "host": "launchermeta.mojang.com",
                 "path": _path,
-                "port": 80
+                "port": 443
             };
             request = http.get(http_options, function(respon) {
                 var body = '';
@@ -67,7 +67,7 @@ console.log('Starting proxy...');
             http_options = {
                 "host": "launcher.mojang.com",
                 "path": _path,
-                "port": 80
+                "port": 443
             };
             request = http.get(http_options, function(respon) {
                 var body = '';
@@ -96,7 +96,7 @@ console.log('Starting proxy...');
             http_options = {
                 "host": "resources.download.minecraft.net",
                 "path": _path,
-                "port": 80
+                "port": 443
             };
             request = http.get(http_options, function(respon) {
                 var body = '';
@@ -125,7 +125,7 @@ console.log('Starting proxy...');
             http_options = {
                 "host": "libraries.minecraft.net",
                 "path": _path,
-                "port": 80
+                "port": 443
             };
             request = http.get(http_options, function(respon) {
                 var body = '';
