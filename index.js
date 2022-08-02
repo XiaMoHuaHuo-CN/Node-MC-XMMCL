@@ -29,14 +29,14 @@ console.log('Starting proxy...');
             reqpath = requrl.path;
             reqproxy = reqpath.split("/")
 
-        if (reqproxy[1] == "launchermeta") {
+        if (reqproxy[1] == "piston-meta") {
 
-            console.log('Proxy LauncherMeta.');
-            _path = reqpath.replace("/launchermeta", "");
+            console.log('Proxy piston-meta.mojang.com.');
+            _path = reqpath.replace("/piston-meta", "");
             
             console.log('GET villa server file.');
             http_options = {
-                "host": "launchermeta.mojang.com",
+                "host": "piston-meta.mojang.com",
                 "path": _path,
                 "port": 443
             };
@@ -58,14 +58,14 @@ console.log('Starting proxy...');
 
             request.end();
 
-        } else if (reqproxy[1] == "launcher") {
+        } else if (reqproxy[1] == "piston-data") {
 
-            console.log('Proxy Launcher.');
-            _path = reqpath.replace("/launcher", "");
+            console.log('Proxy piston-data.mojang.com.');
+            _path = reqpath.replace("/piston-data", "");
 
             console.log('GET villa server file.');
             http_options = {
-                "host": "launcher.mojang.com",
+                "host": "piston-data.mojang.com",
                 "path": _path,
                 "port": 443
             };
@@ -89,7 +89,7 @@ console.log('Starting proxy...');
 
         } else if (reqproxy[1] == "assets") {
 
-            console.log('Proxy Assets.');
+            console.log('Proxy resources.download.minecraft.net.');
             _path = reqpath.replace("/assets", "");
 
             console.log('GET villa server file.');
@@ -118,7 +118,7 @@ console.log('Starting proxy...');
 
         } else if (reqproxy[1] == "libraries") {
 
-            console.log('Proxy Assets.');
+            console.log('Proxy libraries.minecraft.net.');
             _path = reqpath.replace("/libraries", "");
 
             console.log('GET villa server file.');
